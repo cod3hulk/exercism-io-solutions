@@ -1,2 +1,2 @@
 # exercism-io-solutions
-Solutions for (exercism.io)[http://exercism.io] code (katas)[http://en.wikipedia.org/wiki/Kata_%28programming%29].
+My solutions for [exercism.io](http://exercism.io) code [katas](http://en.wikipedia.org/wiki/Kata_%28programming%29). Katas are available for different programming languages like ruby, javascript, scala, etc. - test cases are provided by exercism.io 
