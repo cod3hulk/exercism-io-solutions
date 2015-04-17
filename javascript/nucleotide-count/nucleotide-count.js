@@ -1,5 +1,12 @@
 function DNA(strand) {
     this.strand = strand || "";
+    this.validate(this.strand);
+}
+
+DNA.prototype.validate = function(strand) {
+    if(!/^[ATCG]*$/.test(strand)) {
+        throw "Invalid strand";
+    }
 }
 
 DNA.prototype.histogram = function() {
