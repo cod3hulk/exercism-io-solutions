@@ -6,7 +6,7 @@ module.exports = function toRna(strand) {
         'A': 'U'
     }
 
-    return strand.split('').map(function(nucleotide) {
+    return Array.prototype.map.call(strand, function(nucleotide) {
         return DNAToRNA[nucleotide];
     }).join('');
 };
