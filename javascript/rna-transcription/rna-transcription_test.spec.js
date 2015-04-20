@@ -5,19 +5,19 @@ describe("toRna()", function() {
     expect(toRna('C')).toEqual('G');
   });
 
-  xit("transcribes guanosine to cytidine", function() {
+  it("transcribes guanosine to cytidine", function() {
     expect(toRna('G')).toEqual('C');
   });
 
-  xit("transcribes adenosine to uracil", function() {
+  it("transcribes adenosine to uracil", function() {
     expect(toRna('A')).toEqual('U');
   });
 
-  xit("transcribes thymidine to adenosine", function() {
+  it("transcribes thymidine to adenosine", function() {
     expect(toRna('T')).toEqual('A');
   });
 
-  xit("transcribes all dna nucleotides to their rna complements", function() {
+  it("transcribes all dna nucleotides to their rna complements", function() {
     expect(toRna('ACGTGGTCTTAA'))
         .toEqual('UGCACCAGAAUU');
   });
