@@ -1,9 +1,9 @@
 /**
  * Class to count words in a phrase
  */
-class Phrase(phrase: String) {
+class Phrase(words: String) {
 
-  def wordCount = phrase
+  def wordCount = words
     .split("[^\\w']+")
     .groupBy(_.toLowerCase)
     .mapValues(_.length)
