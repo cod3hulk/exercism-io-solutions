@@ -8,9 +8,9 @@ class Phrase(phrase: String) {
   def wordCount = {
     WordRegex
       .findAllIn(phrase.toLowerCase)
-      .toList
-      .groupBy(identity)
-      .mapValues(_.length)
+      .foldLeft(Map.empty[String, Int].withDefaultValue(0)) {
+      (counts, word) => counts + (word -> (counts(word) + 1))
+    }
   }
 
 }
