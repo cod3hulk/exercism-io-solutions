@@ -4,9 +4,8 @@
 class Phrase(phrase: String) {
 
   def wordCount = phrase
-    .toLowerCase
     .split("[^\\w']+")
-    .groupBy(identity)
+    .groupBy(_.toLowerCase)
     .mapValues(_.length)
 
 }
