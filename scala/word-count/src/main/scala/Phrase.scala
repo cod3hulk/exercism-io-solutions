@@ -3,11 +3,12 @@
  */
 class Phrase(phrase: String) {
 
+  private val WordRegex = "[\\w']+".r
+
   def wordCount = {
-    phrase
-      .toLowerCase
-      .split("[\\s.:!,&@$%^&]")
-      .filter(!_.isEmpty)
+    WordRegex
+      .findAllIn(phrase.toLowerCase)
+      .toList
       .groupBy(identity)
       .mapValues(_.length)
   }
